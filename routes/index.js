@@ -8,6 +8,6 @@ const airVisualRouter = require('./airVisual');
 router.use('/calendarific', calendarificRouter)
 router.use('/airvisual', airVisualRouter)
 router.post('/pixabay',pixabay.getPictures)
-router.post('/sign-in', userRouter);
+router.use('/sign-in', userRouter);
 
 module.exports = router;
