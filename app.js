@@ -1,14 +1,13 @@
-const express = require('express');
-const mongoose = require('mongoose');
-
+const express = require('express')
+const mongoose = require('mongoose')
 const app = express();
-const port = 3003;
+const port = 3000;
 const cors = require('cors');
 const router = require('./routes');
 const dotenv = require('dotenv').config();
 
 mongoose
-  .connect(process.env.DATABASE)
+  .connect(process.env.DATABASE,{useNewUrlParser: true})
   .then(() => {
     app.use(cors());
     app.use(express.json());

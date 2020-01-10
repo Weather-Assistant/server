@@ -5,7 +5,7 @@ class pixabayController {
         // let keyword = req.body.keyword.split(" ").join('%20')
         axios({
             method:'get',
-            url:`https://pixabay.com/api/?key=14857680-84d69cdd60821033ef02125e7&q=${req.body.keyword}%20landmark&image_type=photo`
+            url:`https://pixabay.com/api/?key=${process.env.PIXABAY_KEY}&q=${req.body.keyword}%20landmark&image_type=photo`
         })
         .then( ({data}) => {
             let random = Math.floor(Math.random() * data.hits.length)
