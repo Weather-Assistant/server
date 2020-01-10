@@ -17,4 +17,4 @@ class CalendarifiController {
   }
 }
 
-module.exports = CalendarifiController;
+module.exports = CalendarifiController
