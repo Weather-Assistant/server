@@ -1,7 +1,6 @@
 const calendarificRouter = require('express').Router();
+const { CalendarifiController } = require('../controllers/');
 
-const CalendarificController = require('../controllers/controller');
+calendarificRouter.post('/calender', CalendarifiController.getCalender);
 
-calendarificRouter.post('/calender', CalendarificController.getCalender)
-
-module.exports = calendarificRouter
+module.exports = calendarificRouter;
